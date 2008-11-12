@@ -14,6 +14,6 @@ This plugin allows you to display an Map24 Routing Form on your Blog. You only n
 
 1. Upload the full directory into your wp-content/plugins directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Get your Free MapTP AJAX Application Key at http://developer.navteq.com/site/global/zones/ms/map24-ajax-api/ajax_free_register.jsp
+3. <a href="http://developer.navteq.com/site/global/zones/ms/map24-ajax-api/ajax_free_register.jsp">Get your Free MapTP AJAX Application Key</a>
 4. Insert "[map24]" in the Content, where you want the Map
 5. Maybe change the style with CSS
