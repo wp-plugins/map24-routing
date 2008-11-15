@@ -1,4 +1,5 @@
 === Map24 Routing ===
+Donate link: http://www.azettl.de/donate/
 Tags: map24, routing, maps
 Requires at least: 2.6.2
 Tested up to: 2.6.2
