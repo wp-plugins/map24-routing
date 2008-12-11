@@ -2,7 +2,7 @@
 Donate link: http://www.azettl.de/donate/
 Tags: map24, routing, maps
 Requires at least: 2.6.2
-Tested up to: 2.6.2
+Tested up to: 2.7.0
 Stable tag: 0.0.1
 
 This plugin allows you to display an Map24 Routing Form on your Blog.
