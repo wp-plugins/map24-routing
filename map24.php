@@ -1,7 +1,7 @@
 <?php
   /*
     Plugin Name: Map24 Routing
-    Plugin URI: http://www.azettl.de/2008/11/map24-routing/
+    Plugin URI: http://wpdemo.azettl.de/2008/11/map24-routing/
     Description: This plugin allows you to display an Map24 Routing Form on your Blog.
     Version: 0.0.1
     Author: Andreas Zettl
