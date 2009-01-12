@@ -3,7 +3,7 @@
     Plugin Name: Map24 Routing
     Plugin URI: http://wpdemo.azettl.de/2008/11/map24-routing/
     Description: This plugin allows you to display an Map24 Routing Form on your Blog.
-    Version: 0.0.1
+    Version: 0.0.2
     Author: Andreas Zettl
     Author URI: http://azettl.de/
     Min WP Version: 2.6.2
@@ -29,24 +29,66 @@
   
   function map24_option_page() {
     echo '<div class="wrap">
+            <div id="icon-options-general" class="icon32"><br /></div>
             <h2>Map24</h2>
             <form name="form1" method="post" action="'.$location.'">
-              <label for="map24_key">Map24 API-Key (<a href="http://developer.navteq.com/site/global/zones/ms/map24-ajax-api/ajax_free_register.jsp" target="_blank">Get your Free MapTP AJAX Application Key</a>):</label><br />
-              <input name="map24_key" id="map24_key" value="'.get_option("map24_key").'" type="text" />
-              <br /><br />
-              <label for="map24_height">Map Height:</label><br />
-              <input name="map24_height" id="map24_height" value="'.get_option("map24_height").'" type="text" />
-              <br /><br />
-              <label for="map24_width">Map Width:</label><br />
-              <input name="map24_width" id="map24_width" value="'.get_option("map24_width").'" type="text" />
-              <br /><br />
-              <label for="map24_start">Default Start Address:</label><br />
-              <input name="map24_start" id="map24_start" value="'.get_option("map24_start").'" type="text" />
-              <br /><br />
-              <label for="map24_end">Default Destination Address:</label><br />
-              <input name="map24_end" id="map24_end" value="'.get_option("map24_end").'" type="text" />
-              <br /><br />
-              <input type="submit" value="Save" />
+              <table class="form-table">
+                <tr valign="top">
+                  <th scope="row">Map24 API-Key</th>
+                  <td>
+                    <fieldset>
+                      <legend class="hidden">Map24 API-Key </legend>
+                      <input name="map24_key" id="map24_key" value="'.get_option("map24_key").'" type="text" />
+                      <label for="map24_key">(<a href="http://developer.navteq.com/site/global/zones/ms/map24-ajax-api/ajax_free_register.jsp" target="_blank">Get your Free MapTP AJAX Application Key</a>)</label>
+                    </fieldset>
+                  </td>
+                </tr>
+                
+                <tr valign="top">
+                  <th scope="row">Map Height</th>
+                  <td>
+                    <fieldset>
+                      <legend class="hidden">Map Height </legend>
+                      <input name="map24_height" id="map24_height" value="'.get_option("map24_height").'" type="text" />
+                      <label for="map24_height">Pixel</label>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <th scope="row">Map Width</th>
+                  <td>
+                    <fieldset>
+                      <legend class="hidden">Map Width </legend>
+                      <input name="map24_width" id="map24_width" value="'.get_option("map24_width").'" type="text" />
+                      <label for="map24_width">Pixel</label>
+                    </fieldset>
+                  </td>
+                </tr>
+                
+                <tr valign="top">
+                  <th scope="row">Default Start Address</th>
+                  <td>
+                    <fieldset>
+                      <legend class="hidden">Default Start Address </legend>
+                      <input name="map24_start" id="map24_start" value="'.get_option("map24_start").'" type="text" />
+                      <label for="map24_start">(like Berlin, Paris, London)</label>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <th scope="row">Default Destination Address</th>
+                  <td>
+                    <fieldset>
+                      <legend class="hidden">Default Destination Address </legend>
+                      <input name="map24_end" id="map24_end" value="'.get_option("map24_end").'" type="text" />
+                      <label for="map24_end">(like Berlin, Paris, London)</label>
+                    </fieldset>
+                  </td>
+                </tr>
+              </table>
+              <p class="submit">
+                <input type="submit" name="Submit" class="button-primary" value="Save Changes" />
+              </p>
               <input name="action" value="insert" type="hidden" />
             </form>
           </div>';
