@@ -3,7 +3,7 @@
     Plugin Name: Map24 Routing
     Plugin URI: http://wpdemo.azettl.de/2008/11/map24-routing/
     Description: This plugin allows you to display an Map24 Routing Form on your Blog.
-    Version: 0.0.2
+    Version: 0.0.3
     Author: Andreas Zettl
     Author URI: http://azettl.de/
     Min WP Version: 2.6.2
@@ -12,7 +12,7 @@
   
   add_action('admin_menu', 'map24_add_menu');
   add_action('wp_head', 'map24_head');
-  add_filter('the_content', 'map24_content');
+  add_shortcode('map24', 'map24_content');
   
   $map24_key = get_option('map24_key');
   $map24_height = get_option('map24_height');
@@ -31,7 +31,7 @@
     echo '<div class="wrap">
             <div id="icon-options-general" class="icon32"><br /></div>
             <h2>Map24</h2>
-            <form name="form1" method="post" action="'.$location.'">
+            <form name="map24_options_form" method="post" action="'.$location.'">
               <table class="form-table">
                 <tr valign="top">
                   <th scope="row">Map24 API-Key</th>
@@ -110,8 +110,6 @@
   
    
   function map24_content($content){
-    if(!eregi('[map24]', $content)) return $content;
-    
     $map24 = "
       <div id='map24_area' style='width:".get_option('map24_width')."px;height:".get_option('map24_height')."px'>
         Loading...
@@ -132,6 +130,6 @@
         </form>
         <div id='map24_desc'></div>
       </div>";
-    return str_replace('[map24]', $map24, $content);
+    return $map24;
   }
 ?>
